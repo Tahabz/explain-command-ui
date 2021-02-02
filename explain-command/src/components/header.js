@@ -4,6 +4,9 @@ import { Home } from "@material-ui/icons"
 import { Link } from 'gatsby'
 
 const useStyles = makeStyles({
+	root: {
+		marginBottom: 20
+	},
 	navbarDisplayFlex: {
 		display: `flex`,
 		justifyContent: `space-between`
@@ -22,11 +25,11 @@ const useStyles = makeStyles({
 const Header = () => {
 	const classes = useStyles()
 	return (
-		<AppBar position="static">
+		<AppBar position="static" className={classes.root}>
 			<Toolbar>
 				<Container className={classes.navbarDisplayFlex}>
 					<IconButton edge="start" color="inherit" aria-label="home">
-						<Link style={{ textDecoration: 'none' }} to='/page-2' className={classes.linkText}>
+						<Link style={{ textDecoration: 'none' }} to='/' className={classes.linkText}>
 								<Home fontSize="large" />
 						</Link>
 					</IconButton>
