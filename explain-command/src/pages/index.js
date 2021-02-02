@@ -10,6 +10,7 @@ import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import SearchField from '../components/searchField'
 
 
 const useStyles = makeStyles((theme) =>
@@ -45,16 +46,7 @@ const IndexPage = () => {
 					Explain Command
 				</Typography>
 			</div>
-			<Paper component="form" className={classes.paper}>
-				<InputBase
-					className={classes.input}
-					placeholder="e.g: npm install"
-					inputProps={{ 'aria-label': 'e.g: npm install' }}
-				/>
-				<IconButton color="primary" className={classes.iconButton} aria-label="directions">
-					<SearchIcon />
-				</IconButton>
-			</Paper>
+			<SearchField/>
 		</Layout>
 	)
 }
